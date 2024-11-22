@@ -1,0 +1,21 @@
+[
+    {
+      "Color": "Groc",
+      "Olor": "Normal",
+      "Densitat": "1.020",
+      "pH": "6.0",
+      "Nitrits": "Negatiu",
+      "Proteines": "Negatiu",
+      "Glucosa": "Negatiu",
+      "Cetones": "Negatiu",
+      "Bilirubina": "Negatiu",
+      "Urobilinogen": "Normal",
+      "Hemoglobina": "Negatiu",
+      "Leucocits": "Negatiu",
+      "Eritrocits": "Negatiu",
+      "Cilindres": "Negatiu",
+      "Cristalls": "Negatiu",
+      "Bacteris": "Negatiu",
+      "DNI_Pacient": "123456789"
+    }
+  ]
