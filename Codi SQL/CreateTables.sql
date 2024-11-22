@@ -73,3 +73,18 @@ COLLATE utf8mb4_0900_ai_ci;
 ALTER TABLE analisis_hospitalito_ira.analisis_eses
 ADD CONSTRAINT FK_analisis_eses_dni_pacient FOREIGN KEY (DNI_Pacient)
 REFERENCES analisis_hospitalito_ira.pacient (dni_pacient);
+
+CREATE TABLE analisis_hospitalito_ira.medic (
+  DNI_Medic varchar(9) NOT NULL,
+  Nom varchar(50) NOT NULL,
+  Cognom varchar(50) NOT NULL,
+  Cognom2 varchar(50) DEFAULT NULL,
+  Data_Alta date NOT NULL,
+  Data_Baixa date DEFAULT NULL,
+  Valido tinyint(1) NOT NULL,
+  Contrasenya varchar(255) NOT NULL,
+  PRIMARY KEY (DNI_Medic)
+)
+ENGINE = INNODB,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_0900_ai_ci;
