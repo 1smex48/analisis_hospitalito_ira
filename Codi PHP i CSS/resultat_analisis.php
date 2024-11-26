@@ -22,7 +22,7 @@ $tipo_analisis = $_SESSION['tipo_analisis'];
     </header>
     <nav class="navbar">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="index.php">Inici</a></li>
+            <li class="nav-item"><a class="nav-link" href="../">Inici</a></li>
             <li class="nav-item"><a class="nav-link" href="login_medic.php">Àrea Metge</a></li>
             <li class="nav-item"><a class="nav-link" href="login_pacient.php">Àrea Pacient</a></li>
         </ul>

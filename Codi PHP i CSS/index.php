@@ -14,8 +14,6 @@
         <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="login_medic.php">Àrea Metge</a></li>
             <li class="nav-item"><a class="nav-link" href="login_pacient.php">Àrea Pacient</a></li>
-            <li class="nav-item"><a class="nav-link" href="sobre_nosaltres.php">Sobre Nosaltres</a></li>
-            <li class="nav-item"><a class="nav-link" href="serveis.php">Serveis</a></li>
         </ul>
     </nav>
     <main>

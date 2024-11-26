@@ -12,10 +12,8 @@
     </header>
     <nav class="navbar">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="index.php">Inici</a></li>
+            <li class="nav-item"><a class="nav-link" href="../">Inici</a></li>
             <li class="nav-item"><a class="nav-link" href="login_medic.php">Àrea Metge</a></li>
-            <li class="nav-item"><a class="nav-link" href="sobre_nosaltres.php">Sobre Nosaltres</a></li>
-            <li class="nav-item"><a class="nav-link" href="serveis.php">Serveis</a></li>
         </ul>
     </nav>
     <section>
