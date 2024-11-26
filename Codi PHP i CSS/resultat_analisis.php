@@ -25,13 +25,19 @@ $tipo_analisis = $_SESSION['tipo_analisis'];
             <li class="nav-item"><a class="nav-link" href="index.php">Inici</a></li>
             <li class="nav-item"><a class="nav-link" href="login_medic.php">Àrea Metge</a></li>
             <li class="nav-item"><a class="nav-link" href="login_pacient.php">Àrea Pacient</a></li>
-            <li class="nav-item"><a class="nav-link" href="sobre_nosaltres.php">Sobre Nosaltres</a></li>
-            <li class="nav-item"><a class="nav-link" href="serveis.php">Serveis</a></li>
         </ul>
     </nav>
     <main>
         <h2>Resultats de l'Anàlisi</h2>
         <?php
+
+        if (isset($_POST['logout'])) {
+            // Destruir la sessió i redirigir l'usuari a la pàgina d'inici de sessió
+            session_destroy();
+            header("Location: login_pacient.php");
+            exit();
+        }
+
         if ($tipo_analisis == "sang") {
             $sql = "SELECT Tipus_Sang AS 'Tipus de sang', Nivells_glucosa AS 'Nivells de glucosa', Colesterol AS 'Nivell de colesterol', Recompte_celules_sanguineas AS 'Recompte de cel·lules sanguineas', Deficit_nutriens AS 'Deficit de nutriens', Hormones AS 'Nivell dhormones' FROM analisis_sang WHERE DNI_Pacient = '$dni_pacient' AND ID_Sang = $id_analisis";
         } elseif ($tipo_analisis == "eses") {
@@ -60,6 +66,9 @@ $tipo_analisis = $_SESSION['tipo_analisis'];
 
         $conn->close();
         ?>
+        <form method="post">
+            <button type="submit" name="logout">Tancar Sessió</button>
+        </form>
     </main>
     <footer class="footer">
         <p>&copy; 2024 Hospitalito. Tots els drets reservats.</p>
