@@ -24,8 +24,6 @@ En aquesta carpeta tot el nostre treball relacionat amb el codi PHP i CSS.
 
 Per poder utilitzar les dades de la BD ens [connectarem](index.php) amb codi PHP per poder treballar amb el "include" que té el llenguatge per defecte.
 
-
-
 ### Inici
 
 En el nostre codi està en diferents arxius, un d'ells òbviament és el nostre [inici](index.php). On podem veure que té la nostra plana i un petit resum de què volem aconseguir.
