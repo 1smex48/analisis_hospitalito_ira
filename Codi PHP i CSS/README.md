@@ -22,7 +22,7 @@ En aquesta carpeta tot el nostre treball relacionat amb el codi PHP i CSS.
 
 ### Connexió a la Base de Dades
 
-Per poder utilitzar les dades de la BD ens [connectarem](index.php) amb codi PHP per poder treballar amb el "include" que té el llenguatge per defecte.
+Per poder utilitzar les dades de la BD ens [connectarem](connect_database.php) amb codi PHP per poder treballar amb el "include" que té el llenguatge per defecte.
 
 ### Inici
 
