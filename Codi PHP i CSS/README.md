@@ -20,6 +20,12 @@ Per tant, hem preferit triar 3 colors, blau, negre i blanc. Colors que es poden 
 
 En aquesta carpeta tot el nostre treball relacionat amb el codi PHP i CSS.
 
+### Connexió a la Base de Dades
+
+Per poder utilitzar les dades de la BD ens [connectarem](index.php) amb codi PHP per poder treballar amb el "include" que té el llenguatge per defecte.
+
+
+
 ### Inici
 
 En el nostre codi està en diferents arxius, un d'ells òbviament és el nostre [inici](index.php). On podem veure que té la nostra plana i un petit resum de què volem aconseguir.
@@ -29,3 +35,7 @@ En el nostre codi està en diferents arxius, un d'ells òbviament és el nostre 
 Quan accedim a [l'àrea del pacient](login_pacient.php) podem trobar el "login" del pacient on haurà d'accedir amb el seu DNI i l'ID de la prova.
 
 Després d'això tindrà el [resultat de l'anàlisi](resultat_analisis.php) en un format taula totalment visible i entenedor.
+
+### Àrea del Mèdic
+
+Ara pels nostres mèdics tenen també el seu [espai](login_medic.php), per accedir a aquest ha de posar l'usuari o DNI, a elecció del mèdic i una contrasenya. Amb això accedirem al seu espai on podrem [inserir les dades](enviar_resultats.php) que té l'anàlisi del pacient.
