@@ -1,47 +1,62 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enviar Resultados de Análisis</title>
+    <link rel="stylesheet" href="css/enviar_resultats.css">
+    <title>Enviar Resultats d'Anàlisi</title>
 </head>
 <body>
-    <div>
-        <h2>Enviar Resultados de Análisis</h2>
-        <form action="enviar_resultats.php" method="post" enctype="multipart/form-data">
-            <div>
-                <label for="tipo_analisis">Tipus d'Anàlisi:</label>
-                <select id="tipo_analisis" name="tipo_analisis" required>
-                    <option value="sang">Anàlisi de Sang</option>
-                    <option value="orina">Anàlisi d'Orina</option>
-                    <option value="eses">Anàlisi d'Eses</option>
-                </select>
-            </div>
-            <div>
-                <label for="resultados">Resultats (Arxiu JSON):</label>
-                <input type="file" id="resultados" name="resultados" accept=".json" required>
-            </div>
-            <button type="submit" name="submit">Enviar</button>
-        </form>
-        <form method="post">
-            <button type="submit" name="logout">Logout</button>
-        </form>
+    <header class="header">
+        <h1>Hospitalito IRA</h1>
+    </header>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.php">Inici</a></li>
+            <li class="nav-item"><a class="nav-link" href="login_medic.php">Àrea Metge</a></li>
+            <li class="nav-item"><a class="nav-link" href="login_pacient.php">Àrea Pacient</a></li>
+            <li class="nav-item"><a class="nav-link" href="sobre_nosaltres.php">Sobre Nosaltres</a></li>
+            <li class="nav-item"><a class="nav-link" href="serveis.php">Serveis</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div>
+            <h2>Enviar Resultats d'Anàlisi</h2>
+            <form action="enviar_resultats.php" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="tipo_analisis">Tipus d'Anàlisi:</label>
+                    <select id="tipo_analisis" name="tipo_analisis" required>
+                        <option value="sang">Anàlisi de Sang</option>
+                        <option value="orina">Anàlisi d'Orina</option>
+                        <option value="eses">Anàlisi d'Eses</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="resultados">Resultats (Arxiu JSON):</label>
+                    <input type="file" id="resultados" name="resultados" accept=".json" required>
+                </div>
+                <button type="submit" name="submit">Enviar</button>
+            </form>
+            <form method="post">
+                <button type="submit" name="logout">Tancar Sessió</button>
+            </form>
+
 
         <?php
         session_start();
 
         if (isset($_POST['logout'])) {
-            // Destruir la sesión y redirigir al usuario a la página de inicio de sesión
+            // Destruir la sessió i redirigir l'usuari a la pàgina d'inici de sessió
             session_destroy();
             header("Location: login_medic.php");
             exit();
         }
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
-            // Obtener los datos del formulario
+            // Obtenir les dades del formulari
             $tipo_analisis = $_POST['tipo_analisis'];
 
-            // Verificar si se ha subido un archivo
+            // Verificar si s'ha pujat un arxiu
             if (isset($_FILES['resultados']) && $_FILES['resultados']['error'] === UPLOAD_ERR_OK) {
                 $fileTmpPath = $_FILES['resultados']['tmp_name'];
                 $fileName = $_FILES['resultados']['name'];
@@ -50,19 +65,19 @@
                 $fileNameCmps = explode(".", $fileName);
                 $fileExtension = strtolower(end($fileNameCmps));
                 
-                // Verificar la extensión del archivo
+                // Verificar l'extensió de l'arxiu
                 if ($fileExtension === 'json') {
-                    // Leer el contenido del archivo JSON
+                    // Llegir el contingut de l'arxiu JSON
                     $jsonContent = file_get_contents($fileTmpPath);
                     $resultados = json_decode($jsonContent, true);
                 
                     if (json_last_error() === JSON_ERROR_NONE) {
                         try {
-                            // Conectar a la base de datos usando PDO
+                            // Connectar a la base de dades usant PDO
                             $pdo = new PDO('mysql:host=localhost;dbname=analisis_hospitalito_ira', 'adminmysql', 'P@ssw0rd');
                             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                            // Determinar la tabla y la consulta SQL según el tipo de análisis
+                            // Determinar la taula i la consulta SQL segons el tipus d'anàlisi
                             switch ($tipo_analisis) {
                                 case 'eses':
                                     $stmt = $pdo->prepare('INSERT INTO analisis_eses (Color, Consistencia, Parasits, DNI_Pacient) VALUES (:Color, :Consistencia, :Parasits, :DNI_Pacient)');
@@ -77,7 +92,7 @@
                                     throw new Exception('Tipus d\'anàlisi no vàlid.');
                             }
 
-                            // Iterar sobre los resultados y ejecutar la consulta para cada registro
+                            // Iterar sobre els resultats i executar la consulta per a cada registre
                             foreach ($resultados as $resultado) {
                                 $stmt->execute($resultado);
                             }
@@ -98,5 +113,9 @@
         }
         ?>
     </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Hospitalito. Tots els drets reservats.</p>
+    </footer>
 </body>
 </html>
