@@ -30,9 +30,7 @@ En el nostre codi està en diferents arxius, un d'ells òbviament és el nostre 
 
 ### Àrea Pacient
 
-Quan accedim a [l'àrea del pacient](login_pacient.php) podem trobar el "login" del pacient on haurà d'accedir amb el seu DNI i l'ID de la prova.
-
-Després d'això tindrà el [resultat de l'anàlisi](resultat_analisis.php) en un format taula totalment visible i entenedor.
+Quan accedim a [l'àrea del pacient](login_pacient.php) podem trobar el "login" del pacient on haurà d'accedir amb el seu DNI i l'ID de la prova. Després d'això tindrà el [resultat de l'anàlisi](resultat_analisis.php) en un format taula totalment visible i entenedor.
 
 ### Àrea del Mèdic
 
