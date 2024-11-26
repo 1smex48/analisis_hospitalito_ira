@@ -8,7 +8,7 @@ Per començar, hem decidit afegir els 3 tipus d'anàlisis que es fan principalme
 
 ### Analisis de Sang
 
-En aquests anàlisis es poden trobar molta informació que podem aprofitar per millorar la salut cardiovascular i tenir una millora significativa de com hem de treballar el nostre cos. En els nostres [anàlisis](analisis_sang.json) informem:
+En aquests anàlisis es poden trobar molta informació que podem aprofitar per millorar la salut cardiovascular i tenir una millora significativa de com hem de treballar el nostre cos. En els nostres [anàlisis de sang](analisis_sang.json) informem:
 
 1. Tipus de Sang
 
