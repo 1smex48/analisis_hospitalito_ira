@@ -1,4 +1,4 @@
-# Codi PHP i CSS
+# Codi PHP, JS i CSS
 
 ## Codi PHP
 
@@ -18,7 +18,7 @@ Per tant, hem preferit triar 3 colors, blau, negre i blanc. Colors que es poden 
 
 ## Funcionament
 
-En aquesta carpeta tot el nostre treball relacionat amb el codi PHP i CSS.
+En aquesta carpeta tot el nostre treball relacionat amb el codi PHP, JS i CSS.
 
 ### Connexió a la Base de Dades
 
