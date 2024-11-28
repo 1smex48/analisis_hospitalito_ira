@@ -18,7 +18,7 @@ body {
 .navbar {
     background-color: #1e1e1e;
     border-bottom: 2px solid #2e2e2e;
-    padding: 20px 0; /* Añadido para hacer el navbar más alto */
+    padding: 20px 0; 
     transition: all 0.3s ease;
 }
 
@@ -37,7 +37,7 @@ body {
 .nav-link {
     color: #ffffff;
     text-decoration: none;
-    padding: 15px 25px; /* Incrementado para hacer los enlaces más grandes */
+    padding: 15px 25px;
     border-radius: 10px;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
@@ -60,7 +60,7 @@ section {
 }
 
 section.open {
-    max-height: 1000px; /* Ajustar según necesidad */
+    max-height: 1000px;
 }
 
 section h2 {
@@ -73,7 +73,7 @@ section h2 {
 
 .content {
     padding: 10px 20px;
-    display: block; /* Mostrar el contenido por defecto */
+    display: block;
 }
 
 .footer {
@@ -87,7 +87,7 @@ section h2 {
 }
 
 h1 {
-    color: #ffffff; /* Título en blanco */
+    color: #ffffff;
 }
 
 h2 {

@@ -49,10 +49,9 @@
             session_start();
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                // Validar y sanitizar los datos de entrada
-                $dni_pacient = filter_input(INPUT_POST, 'dni_pacient', FILTER_SANITIZE_STRING);
-                $id_analisis = filter_input(INPUT_POST, 'id_analisis', FILTER_SANITIZE_STRING);
-                $tipo_analisis = filter_input(INPUT_POST, 'tipo_analisis', FILTER_SANITIZE_STRING);
+                $dni_pacient = filter_input(INPUT_POST, 'dni_pacient');
+                $id_analisis = filter_input(INPUT_POST, 'id_analisis');
+                $tipo_analisis = filter_input(INPUT_POST, 'tipo_analisis');
 
                 if ($tipo_analisis == "eses") {
                     $stmt = $conn->prepare("SELECT ID_Eses FROM analisis_eses WHERE ID_Eses = ? AND DNI_Pacient = ?");
@@ -69,12 +68,10 @@
                 $stmt->store_result();
 
                 if ($stmt->num_rows > 0) {
-                    // Almacenar variables en la sesión
                     $_SESSION['dni_pacient'] = $dni_pacient;
                     $_SESSION['id_analisis'] = $id_analisis;
                     $_SESSION['tipo_analisis'] = $tipo_analisis;
 
-                    // Redirigir a la página de resultados
                     header("Location: resultat_analisis.php");
                     exit();
                 } else {

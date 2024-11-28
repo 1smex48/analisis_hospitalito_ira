@@ -38,28 +38,22 @@
 
             <?php
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                // Supongamos que el DNI y la contraseña son recibidos desde el formulario
                 $dni = $_POST['dni'];
                 $password = $_POST['password'];
 
                 try {
-                    // Conectar a la base de datos usando PDO
                     $pdo = new PDO('mysql:host=localhost;dbname=analisis_hospitalito_ira', 'adminmysql', 'P@ssw0rd');
                     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                    // Preparar la consulta para obtener la contraseña encriptada del médico
                     $stmt = $pdo->prepare('SELECT Contrasenya FROM medic WHERE DNI_Medic = :dni');
                     $stmt->execute([':dni' => $dni]);
 
-                    // Obtener la contraseña encriptada
                     $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
                     if ($row) {
                         $hashed_password = $row['Contrasenya'];
 
-                        // Verificar la contraseña ingresada con la encriptada
                         if (password_verify($password, $hashed_password)) {
-                            // Redirigir al usuario a enviar_resultats.php
                             header('Location: enviar_resultats.php');
                             exit();
                         } else {

@@ -2,7 +2,6 @@
 include 'connect_database.php';
 session_start();
 
-// Recuperar variables de la sesión
 $dni_pacient = $_SESSION['dni_pacient'];
 $id_analisis = $_SESSION['id_analisis'];
 $tipo_analisis = $_SESSION['tipo_analisis'];
@@ -32,7 +31,6 @@ $tipo_analisis = $_SESSION['tipo_analisis'];
         <?php
 
         if (isset($_POST['logout'])) {
-            // Destruir la sessió i redirigir l'usuari a la pàgina d'inici de sessió
             session_destroy();
             header("Location: login_pacient.php");
             exit();
@@ -50,7 +48,6 @@ $tipo_analisis = $_SESSION['tipo_analisis'];
 
         if ($result->num_rows > 0) {
             echo "<table border='1' class='result-table'>";
-            // Generar filas de tabla verticalmente
             while ($row = $result->fetch_assoc()) {
                 foreach ($row as $field => $value) {
                     echo "<tr>";

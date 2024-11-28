@@ -43,17 +43,14 @@
             session_start();
 
             if (isset($_POST['logout'])) {
-                // Destruir la sessió i redirigir l'usuari a la pàgina d'inici de sessió
                 session_destroy();
                 header("Location: login_medic.php");
                 exit();
             }
 
             if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
-                // Obtenir les dades del formulari
                 $tipo_analisis = $_POST['tipo_analisis'];
 
-                // Verificar si s'ha pujat un arxiu
                 if (isset($_FILES['resultados']) && $_FILES['resultados']['error'] === UPLOAD_ERR_OK) {
                     $fileTmpPath = $_FILES['resultados']['tmp_name'];
                     $fileName = $_FILES['resultados']['name'];
@@ -62,19 +59,15 @@
                     $fileNameCmps = explode(".", $fileName);
                     $fileExtension = strtolower(end($fileNameCmps));
                     
-                    // Verificar l'extensió de l'arxiu
                     if ($fileExtension === 'json') {
-                        // Llegir el contingut de l'arxiu JSON
                         $jsonContent = file_get_contents($fileTmpPath);
                         $resultados = json_decode($jsonContent, true);
                     
                         if (json_last_error() === JSON_ERROR_NONE) {
                             try {
-                                // Connectar a la base de dades usant PDO
                                 $pdo = new PDO('mysql:host=localhost;dbname=analisis_hospitalito_ira', 'adminmysql', 'P@ssw0rd');
                                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                                // Determinar la taula i la consulta SQL segons el tipus d'anàlisi
                                 switch ($tipo_analisis) {
                                     case 'eses':
                                         $stmt = $pdo->prepare('INSERT INTO analisis_eses (Color, Consistencia, Parasits, DNI_Pacient) VALUES (:Color, :Consistencia, :Parasits, :DNI_Pacient)');
@@ -89,7 +82,6 @@
                                         throw new Exception('Tipus d\'anàlisi no vàlid.');
                                 }
 
-                                // Iterar sobre els resultats i executar la consulta per a cada registre
                                 foreach ($resultados as $resultado) {
                                     $stmt->execute($resultado);
                                 }

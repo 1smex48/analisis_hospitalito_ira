@@ -18,7 +18,7 @@ body {
 .navbar {
     background-color: #1e1e1e;
     border-bottom: 2px solid #2e2e2e;
-    padding: 20px 0; /* Añadido para hacer el navbar más alto */
+    padding: 20px 0; 
     transition: all 0.3s ease;
 }
 
@@ -37,7 +37,7 @@ body {
 .nav-link {
     color: #ffffff;
     text-decoration: none;
-    padding: 15px 25px; /* Incrementado para hacer los enlaces más grandes */
+    padding: 15px 25px; 
     border-radius: 10px;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
@@ -57,10 +57,37 @@ h1 {
 
 h2 {
     color: #2196f3;
+    text-align: center;
 }
 
 p, table {
     font-size: 1rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+button[type="submit"], button[name="logout"] {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    background-color: #2196f3;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover, button[name="logout"]:hover {
+    background-color: #1976d2;
 }
 
 .result-table {
