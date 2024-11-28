@@ -39,7 +39,7 @@ $tipo_analisis = $_SESSION['tipo_analisis'];
         }
 
         if ($tipo_analisis == "sang") {
-            $sql = "SELECT Tipus_Sang AS 'Tipus de sang', Nivells_glucosa AS 'Nivells de glucosa', Colesterol AS 'Nivell de colesterol', Recompte_celules_sanguineas AS 'Recompte de cel·lules sanguineas', Deficit_nutriens AS 'Deficit de nutriens', Hormones AS 'Nivell dhormones' FROM analisis_sang WHERE DNI_Pacient = '$dni_pacient' AND ID_Sang = $id_analisis";
+            $sql = "SELECT Tipus_Sang AS 'Tipus de sang', Nivells_glucosa AS 'Nivells de glucosa', Colesterol AS 'Nivell de colesterol', Recompte_celules_sanguineas AS 'Recompte de cel·lules sanguineas', Deficit_nutriens AS 'Deficit de nutriens', Hormones AS 'Nivell de hormones' FROM analisis_sang WHERE DNI_Pacient = '$dni_pacient' AND ID_Sang = $id_analisis";
         } elseif ($tipo_analisis == "eses") {
             $sql = "SELECT Color AS 'Color', Consistencia AS 'Consistència', Parasits AS 'Paràsits' FROM analisis_eses WHERE DNI_Pacient = '$dni_pacient' AND ID_Eses = $id_analisis";
         } elseif ($tipo_analisis == "orina") {
@@ -49,13 +49,13 @@ $tipo_analisis = $_SESSION['tipo_analisis'];
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
-            echo "<table border='1'>";
+            echo "<table border='1' class='result-table'>";
             // Generar filas de tabla verticalmente
             while ($row = $result->fetch_assoc()) {
                 foreach ($row as $field => $value) {
                     echo "<tr>";
                     echo "<th>{$field}</th>";
-                    echo "<td>{$value}</td>";
+                    echo "<td class='value'>{$value}</td>";
                     echo "</tr>";
                 }
             }
@@ -73,5 +73,6 @@ $tipo_analisis = $_SESSION['tipo_analisis'];
     <footer class="footer">
         <p>&copy; 2024 Hospitalito. Tots els drets reservats.</p>
     </footer>
+    <script src="js/resultat_analisis.js"></script>
 </body>
 </html>

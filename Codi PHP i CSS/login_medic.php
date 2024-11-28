@@ -18,7 +18,9 @@
     </nav>
     <section>
         <h2>ÀREA METGE</h2>
-        <p style="text-align:center">Per accedir a l'àrea si ets metge, introdueix el teu DNI i contrasenya.</p>
+        <div class="content">
+            <p style="text-align:center">Per accedir a l'àrea si ets metge, introdueix el teu DNI i contrasenya.</p>
+        </div>
     </section>
     <main>
         <div class="login-container">
@@ -35,46 +37,47 @@
             </form>
 
             <?php
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // Supongamos que el DNI y la contraseña son recibidos desde el formulario
-            $dni = $_POST['dni'];
-            $password = $_POST['password'];
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                // Supongamos que el DNI y la contraseña son recibidos desde el formulario
+                $dni = $_POST['dni'];
+                $password = $_POST['password'];
 
-            try {
-                // Conectar a la base de datos usando PDO
-                $pdo = new PDO('mysql:host=localhost;dbname=analisis_hospitalito_ira', 'adminmysql', 'P@ssw0rd');
-                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                try {
+                    // Conectar a la base de datos usando PDO
+                    $pdo = new PDO('mysql:host=localhost;dbname=analisis_hospitalito_ira', 'adminmysql', 'P@ssw0rd');
+                    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                // Preparar la consulta para obtener la contraseña encriptada del médico
-                $stmt = $pdo->prepare('SELECT Contrasenya FROM medic WHERE DNI_Medic = :dni');
-                $stmt->execute([':dni' => $dni]);
+                    // Preparar la consulta para obtener la contraseña encriptada del médico
+                    $stmt = $pdo->prepare('SELECT Contrasenya FROM medic WHERE DNI_Medic = :dni');
+                    $stmt->execute([':dni' => $dni]);
 
-                // Obtener la contraseña encriptada
-                $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                    // Obtener la contraseña encriptada
+                    $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-                if ($row) {
-                    $hashed_password = $row['Contrasenya'];
+                    if ($row) {
+                        $hashed_password = $row['Contrasenya'];
 
-                    // Verificar la contraseña ingresada con la encriptada
-                    if (password_verify($password, $hashed_password)) {
-                        // Redirigir al usuario a enviar_resultats.php
-                        header('Location: enviar_resultats.php');
-                        exit();
+                        // Verificar la contraseña ingresada con la encriptada
+                        if (password_verify($password, $hashed_password)) {
+                            // Redirigir al usuario a enviar_resultats.php
+                            header('Location: enviar_resultats.php');
+                            exit();
+                        } else {
+                            echo '<div>Contraseña incorrecta.</div>';
+                        }
                     } else {
-                        echo '<div>Contraseña incorrecta.</div>';
+                        echo '<div>DNI no encontrado.</div>';
                     }
-                } else {
-                    echo '<div>DNI no encontrado.</div>';
+                } catch (PDOException $e) {
+                    echo '<div>Error: ' . $e->getMessage() . '</div>';
                 }
-            } catch (PDOException $e) {
-                echo '<div>Error: ' . $e->getMessage() . '</div>';
             }
-        }
-        ?>
+            ?>
         </div>
     </main>
     <footer class="footer">
         <p>&copy; 2023 Hospitalito. Tots els drets reservats.</p>
     </footer>
+    <script src="js/login.js"></script>
 </body>
 </html>

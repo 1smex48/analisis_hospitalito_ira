@@ -1,31 +1,31 @@
-/* hospitalito_ira.css */
-
-/* Estilos generales */
 body {
-    background-color: #f8f9fa; /* Fondo claro */
-    color: #343a40; /* Texto oscuro */
     font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
     margin: 0;
     padding: 0;
-    text-align: center;
+    transition: all 0.3s ease;
 }
 
 .header {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #1e1e1e;
     padding: 20px;
     text-align: center;
+    border-bottom: 2px solid #2e2e2e;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .navbar {
-    background-color: #343a40;
-    padding: 10px;
+    background-color: #1e1e1e;
+    border-bottom: 2px solid #2e2e2e;
+    padding: 20px 0; /* Añadido para hacer el navbar más alto */
+    transition: all 0.3s ease;
 }
 
 .navbar-nav {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
 }
@@ -35,31 +35,66 @@ body {
 }
 
 .nav-link {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 18px;
+    padding: 15px 25px; /* Incrementado para hacer los enlaces más grandes */
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 .nav-link:hover {
-    text-decoration: underline;
+    background-color: #3e3e3e;
+    transform: scale(1.05);
 }
 
 main {
     padding: 20px;
-    height: calc(78.7vh - 100px);
-}
-
-h2 {
-    color: #007bff;
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    border: 1px solid #2e2e2e;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    max-height: 1000px; /* Ajustar según necesidad */
+}
+
+section.open {
+    max-height: 1000px; /* Ajustar según necesidad */
+}
+
+section h2 {
+    cursor: pointer;
+    background-color: #2e2e2e;
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.content {
+    padding: 10px 20px;
+    display: block; /* Mostrar el contenido por defecto */
 }
 
 .footer {
-    background-color: #343a40;
-    color: #fff;
-    padding: 10px;
+    background-color: #1e1e1e;
     text-align: center;
+    padding: 10px;
+    border-top: 2px solid #2e2e2e;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+h1 {
+    color: #ffffff; /* Título en blanco */
+}
+
+h2 {
+    color: #2196f3;
+}
+
+p {
+    font-size: 1rem;
 }

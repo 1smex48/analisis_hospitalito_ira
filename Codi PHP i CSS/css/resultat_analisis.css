@@ -1,31 +1,31 @@
-/* hospitalito_ira.css */
-
-/* Estilos generales */
 body {
-    background-color: #f8f9fa; /* Fondo claro */
-    color: #343a40; /* Texto oscuro */
     font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
     margin: 0;
     padding: 0;
-    text-align: center;
+    transition: all 0.3s ease;
 }
 
 .header {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #1e1e1e;
     padding: 20px;
     text-align: center;
+    border-bottom: 2px solid #2e2e2e;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .navbar {
-    background-color: #343a40;
-    padding: 10px;
+    background-color: #1e1e1e;
+    border-bottom: 2px solid #2e2e2e;
+    padding: 20px 0; /* Añadido para hacer el navbar más alto */
+    transition: all 0.3s ease;
 }
 
 .navbar-nav {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
 }
@@ -35,71 +35,66 @@ body {
 }
 
 .nav-link {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 18px;
+    padding: 15px 25px; /* Incrementado para hacer los enlaces más grandes */
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 .nav-link:hover {
-    text-decoration: underline;
+    background-color: #3e3e3e;
+    transform: scale(1.05);
 }
 
 main {
     padding: 20px;
 }
 
+h1 {
+    color: #ffffff;
+} 
+
 h2 {
-    color: #007bff;
+    color: #2196f3;
 }
 
-section {
+p, table {
+    font-size: 1rem;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-.footer {
-    background-color: #343a40;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
-
-/* Estilos específicos para resultat_analisis.php */
-
-table {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background-color: #fff;
-}
-
-table, th, td {
-    border: 1px solid #007bff;
-}
-
-th, td {
+.result-table th, .result-table td {
+    border: 1px solid #2e2e2e;
     padding: 10px;
     text-align: left;
-}
-
-th {
-    background-color: #007bff;
-    color: #fff;
-}
-
-td {
-    background-color: #f8f9fa;
-}
-
-button[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
     cursor: pointer;
-    margin-top: 20px;
 }
 
-button[type="submit"]:hover {
-    background-color: #0056b3;
+.result-table th {
+    background-color: #1e1e1e;
+}
+
+.result-table td.value {
+    transition: visibility 0.3s, opacity 0.3s ease;
+}
+
+.result-table td.value.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.footer {
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid #2e2e2e;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

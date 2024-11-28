@@ -17,27 +17,34 @@
         </ul>
     </nav>
     <main>
-        <section>
+        <section class="open">
             <h2>Pàgina Principal</h2>
-            <p>Aquesta pàgina està feta per proporcionar totes les dades per a les anàlisis fetes pels nostres especialistes
-                i poder tenir un contacte directe amb ells. Aquí podràs trobar informació sobre els diferents tipus d'anàlisis
-                que oferim, incloent anàlisis de sang, orina i eses.</p>
-            <p>Els pacients poden veure els resultats dels seus anàlisis accedint a l'Àrea Pacient, mentre que els metges poden
-                inserir els resultats per a que siguin accessibles per altres metges a l'Àrea Metge.</p>
+            <div class="content">
+                <p>Aquesta pàgina està feta per proporcionar totes les dades per a les anàlisis fetes pels nostres especialistes
+                    i poder tenir un contacte directe amb ells. Aquí podràs trobar informació sobre els diferents tipus d'anàlisis
+                    que oferim, incloent anàlisis de sang, orina i eses.</p>
+                <p>Els pacients poden veure els resultats dels seus anàlisis accedint a l'Àrea Pacient, mentre que els metges poden
+                    inserir els resultats per a que siguin accessibles per altres metges a l'Àrea Metge.</p>
+            </div>
         </section>
-        <section>
+        <section id="pacient" class="open">
             <h2>Àrea Pacient</h2>
-            <p>En aquesta secció, els pacients poden accedir als resultats dels seus anàlisis de sang, orina i eses. És una manera
-                fàcil i segura de mantenir-se informat sobre la seva salut.</p>
+            <div class="content">
+                <p>En aquesta secció, els pacients poden accedir als resultats dels seus anàlisis de sang, orina i eses. És una manera
+                    fàcil i segura de mantenir-se informat sobre la seva salut.</p>
+            </div>
         </section>
-        <section>
+        <section id="metge" class="open">
             <h2>Àrea Metge</h2>
-            <p>Aquesta secció està destinada als metges, on poden inserir i revisar els resultats dels anàlisis dels pacients.
-                Això permet una col·laboració eficient entre els professionals de la salut.</p>
+            <div class="content">
+                <p>Aquesta secció està destinada als metges, on poden inserir i revisar els resultats dels anàlisis dels pacients.
+                    Això permet una col·laboració eficient entre els professionals de la salut.</p>
+            </div>
         </section>
     </main>
     <footer class="footer">
         <p>&copy; 2024 Hospitalito. Tots els drets reservats.</p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
