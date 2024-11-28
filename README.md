@@ -13,7 +13,7 @@ Actualment, hi ha moltes clíniques i hospitals que comencen a experimentar amb 
 Ara un index on es pot veure tot el nostre treball:
 
 1. [Codi SQL (base de dades)](<Codi SQL>)
-2. [Codi PHP i CSS (plana web)](<Codi PHP i CSS>)
+2. [Codi PHP i CSS (plana web)](<Codi PHP, JS i CSS>)
 3. [Codi JSON (inserció de dades)](<Codi JSON>)
 
 ## Fet per...
