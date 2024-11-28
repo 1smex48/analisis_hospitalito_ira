@@ -8,9 +8,13 @@ En el cas dels pacients, és perquè ells accedeixin a les seves anàlisis sense
 
 Mentre que en el cas dels metges serà poder accedir amb un usuari (DNI) i una contrasenya a la seva elecció, tots aquests creats amb anterioritat perquè puguin inserir dades, que aquests es trobaran en un arxiu JSON.
 
+## Codi JS
+
+Per afegir una mica de visibilitat a les planes em escollit per utilitzar JS (JavaScript), per les animacions i millores visuals.
+
 ## Codi CSS
 
-Òbviament, a l'ésser una pàgina web relacionada amb la sanitat, ha de ser seriosa i formal, amb colors molt nets i sense intents creatius.
+Òbviament, al ser una pàgina web relacionada amb la sanitat, ha de ser seriosa i formal, amb colors molt nets i sense intents creatius.
 
 Encara que la creativitat sigui la força de l'ésser humà, cal ser discrets i formals quan es tracta sobre dades personals sobre la salut cal ser molt categòriques.
 
