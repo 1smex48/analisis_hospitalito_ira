@@ -15,7 +15,7 @@ Ara un index on es pot veure tot el nostre treball:
 1. [Codi SQL (base de dades)](<Codi SQL>)
 2. [Codi PHP, JS i CSS (plana web)](<Codi PHP, JS i CSS>)
 3. [Codi JSON (inserció de dades)](<Codi JSON>)
-4. [(Demo (video)](<Demo>)
+4. [Demo (video)](<Demo>)
 
 ## Fet per...
 
