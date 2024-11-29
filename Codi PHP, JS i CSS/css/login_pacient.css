@@ -108,6 +108,10 @@ p {
     background-color: #1e1e1e;
 }
 
+#dni_pacient, #id_analisis {
+    width: 95%;
+}
+
 input[type="text"], input[type="password"], select {
     width: 100%;
     padding: 10px;
