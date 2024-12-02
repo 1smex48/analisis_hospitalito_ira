@@ -70,7 +70,7 @@
         </div>
     </main>
     <footer class="footer">
-        <p>&copy; 2023 Hospitalito. Tots els drets reservats.</p>
+        <p>&copy; 2024 Hospitalito. Tots els drets reservats.</p>
     </footer>
     <script src="js/login.js"></script>
 </body>
