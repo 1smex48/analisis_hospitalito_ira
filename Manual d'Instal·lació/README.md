@@ -16,7 +16,7 @@
 Per començar necesitarem un Servidor Ubuntu 22.04 o 24.04, els dos LTS. Amb aixà fet instal·larem els paquets que es requereixen, abans de tot farem:
 
 ```:
-sudo apt update && upgrade
+sudo apt update && sudo apt upgrade -y
 ```
 
 #### Instal·lació d'Apache2
@@ -24,7 +24,7 @@ sudo apt update && upgrade
 Amb tots el paquets actualizats començarem amb l'instal·lació del servei Apache2:
 
 ```:
-sudo apt install apache2 -y
+sudo apt install apache2
 ```
 
 I iniciarem el servei.
