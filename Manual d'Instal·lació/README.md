@@ -24,7 +24,7 @@ sudo apt update && sudo apt upgrade -y
 Amb tots el paquets actualizats començarem amb l'instal·lació del servei Apache2:
 
 ```:
-sudo apt install apache2 -y
+sudo apt install apache2
 ```
 
 I iniciarem el servei.
