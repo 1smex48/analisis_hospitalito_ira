@@ -1,6 +1,6 @@
 # Manual d'Instal·lació
 
-## Index
+## Índex
 
 1. [Preparació del Servidor](#preparació-del-servidor)
 2. [Configuració del Servidor Apache2](<Apache2/README.md>)
@@ -13,7 +13,7 @@
 
 #### Actualització dels paquets
 
-Per començar necesitarem un Servidor Ubuntu 22.04 o 24.04, els dos LTS. Amb aixà fet instal·larem els paquets que es requereixen, abans de tot farem:
+Per començar necessitarem un Servidor Ubuntu 22.04 o 24.04, els dos LTS. Amb aixà fet instal·larem els paquets que es requereixen, abans de tot farem:
 
 ```:
 sudo apt update && sudo apt upgrade -y
@@ -21,7 +21,7 @@ sudo apt update && sudo apt upgrade -y
 
 #### Instal·lació d'Apache2
 
-Amb tots el paquets actualizats començarem amb l'instal·lació del servei Apache2:
+Amb tots els paquets actualitzats començarem amb la instal·lació del servei Apache2:
 
 ```:
 sudo apt install apache2
@@ -35,13 +35,13 @@ sudo systemctl start apache2
 
 #### Instal·lació de PHP
 
-Ara amb aquest servei iniciat, instal·larem el paquet per poder utilitzar el paquet PHP:
+Ara amb aquest servei posat en marxa, instal·larem el paquet per poder utilitzar el paquet PHP:
 
 ```:
 sudo apt install php
 ```
 
-Pero per que Apache pugui llegir els PHP's necesitarem instal·lar-li una llibreria:
+Però perquè Apache pugui llegir els PHP's necessitarem instal·lar-li una llibreria:
 
 ```:
 sudo apt install libapache2-mod-php
@@ -49,7 +49,7 @@ sudo apt install libapache2-mod-php
 
 #### Instal·lació de MySQL
 
-Ara que el nostre Apache qque pot veure els PHP's instal·larem el servei MySQL.
+Ara que el nostre Apache que pot veure els PHP's instal·larem el servei MySQL.
 
 ```:
 sudo apt install mysql-server
@@ -61,4 +61,4 @@ I iniciarem el servei.
 sudo systemctl start mysql
 ```
 
-Amb aixo finalment, tenim el servidor preparat.
+Amb això finalment, tenim el servidor preparat.
