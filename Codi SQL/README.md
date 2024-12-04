@@ -4,7 +4,7 @@ Per la creació de la nostra base de dades hem escollit utilitzar MYSQL, ja que 
 
 ## Creació
 
-Per crear la nostra base de dades i les seves taules hem dividit aquests codis en dos apartats, la creació de la [base de dades](CreateDB.sql) en si, i les [taules](CreateTables.sql) a part. Per fer més fàcil d'entendre el codi i dividir l'estructura.
+Per crear la nostra base de dades i les seves taules hem dividit aquests codis en tres apartats,la inserció d'un nou [usuari](CreateUser.sql) per la gestió de la base de dades, la creació de la [base de dades](CreateDB.sql) en si, i les [taules](CreateTables.sql) a part. Per fer més fàcil d'entendre el codi i dividir l'estructura.
 
 ## Inserció de Dades
 
