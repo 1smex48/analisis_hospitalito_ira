@@ -10,11 +10,11 @@ Mentre que en el cas dels metges serà poder accedir amb un usuari (DNI) i una c
 
 ## Codi JS
 
-Per afegir una mica de visibilitat a les planes em escollit per utilitzar JS (JavaScript), per les animacions i millores visuals.
+Per afegir una mica de visibilitat a les planes hem escollit per utilitzar JS (JavaScript), per les animacions i millores visuals.
 
 ## Codi CSS
 
-Òbviament, al ser una pàgina web relacionada amb la sanitat, ha de ser seriosa i formal, amb colors molt nets i sense intents creatius.
+Òbviament, en ser una pàgina web relacionada amb la sanitat, ha de ser seriosa i formal, amb colors molt nets i sense intents creatius.
 
 Encara que la creativitat sigui la força de l'ésser humà, cal ser discrets i formals quan es tracta sobre dades personals sobre la salut cal ser molt categòriques.
 
