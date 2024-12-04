@@ -4,7 +4,7 @@
 
 ### Configuració del servidor
 
-El nostre servidor MySQL l'administració remota, amb el nostre client. Per permetre l'administració remota amb interficie grafica tenim que configurar l'arxiu /etc/mysql/mysql.conf.d/mysqld.cnf editant els següents parametres:
+El nostre servidor MySQL l'administració remota, amb el nostre client. Per permetre l'administració remota amb interfície gràfica hem que configurar l'arxiu /etc/mysql/mysql.conf.d/mysqld.cnf editant els següents paràmetres:
 
 ```:
 # Instead of skip-networking the default is now to listen only on
@@ -13,7 +13,7 @@ bind-address            = 0.0.0.0
 mysqlx-bind-address     = 127.0.0.1
 ```
 
-Aixi fem que el servidor permeti qualsevol IP accedeixi a les base de dades MySQL.
+Aixi fem que el servidor permeti qualsevol IP accedeixi a les bases de dades MySQL.
 
 ### Configuració del client
 
@@ -21,7 +21,7 @@ Ara en el client accedirem a descarregar [dbForge](https://www.devart.com/login.
 
 ## Creació de la Base de Dades i Taules
 
-Ara crearem la base de dades i les taules per poder emmagatzemar les dades dels analisis.
+Ara crearem la base de dades i les taules per poder emmagatzemar les dades dels anàlisis.
 
 ### Creació de la BD
 
@@ -39,7 +39,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'adminmysql'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ```
 
-Amb l'usuari creat farem la base de dades. Per fer-la anirem al dbforge i connectarem amb la IP del servidor i l'usuri creat amb anterioritat i crearem la BD amb click dret i "New DataBase".
+Amb l'usuari creat farem la base de dades. Per fer-la anirem al dbForge i connectarem amb la IP del servidor i l'usuari creat amb anterioritat i crearem la BD amb click dret i "New DataBase".
 
 ![New Database with dbForge](New_Database.png)
 
@@ -53,12 +53,12 @@ COLLATE utf8mb4_0900_ai_ci;
 
 ### Creació de les taules
 
-Per seguir amb la creació anirem a les taules, per crear-les podem fer-ho amb dbForge amb el mateix procediment, doble-click la base de dades, click dret a Tables i finalment a New Table.
+Per continuar amb la creació anirem a les taules, per crear-les podem fer-ho amb dbForge amb el mateix procediment, doble-click la base de dades, click dret a Tables i finalment a New Table.
 
 ![New Table with dbForge](New_Table.png)
 
-Ara per comandes hem fet aquest codi SQL: [Click-me](<../../Codi SQL/CreateTables.sql>), fem aquest codi en un arxiu ja que es molt llarg.
+Ara per comandes hem fet aquest codi SQL: [Click-me](<../../Codi SQL/CreateTables.sql>), fem aquest codi en un arxiu, ja que és molt llarg.
 
 ### Dummy Data
 
-Finalment per inserir dades fem un arxiu amb dades inventades per poder probar la base de dades. [Click-me](<../../Codi SQL/InsertDummy.sql>)
+Finalment per inserir dades fem un arxiu amb dades inventades per poder provar la base de dades. [Click-me](<../../Codi SQL/InsertDummy.sql>)
