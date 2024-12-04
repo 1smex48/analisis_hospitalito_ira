@@ -40,6 +40,7 @@ FLUSH PRIVILEGES;
 ```
 
 Amb l'usuari creat farem la base de dades. Per fer-la anirem al dbforge i connectarem amb la IP del servidor i l'usuri creat amb anterioritat i crearem la BD amb click dret i "New DataBase".
+
 ![New Database with dbForge](New_Database.png)
 
 Ara si vols fer-ho amb comandes, la nostra Base de dades l'hem fet amb el codi següent:
@@ -53,6 +54,7 @@ COLLATE utf8mb4_0900_ai_ci;
 ### Creació de les taules
 
 Per seguir amb la creació anirem a les taules, per crear-les podem fer-ho amb dbForge amb el mateix procediment, doble-click la base de dades, click dret a Tables i finalment a New Table.
+
 ![New Table with dbForge](New_Table.png)
 
 Ara per comandes hem fet aquest codi SQL: [Click-me](<../../Codi SQL/CreateTables.sql>), fem aquest codi en un arxiu ja que es molt llarg.
