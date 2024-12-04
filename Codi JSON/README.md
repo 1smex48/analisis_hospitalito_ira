@@ -1,12 +1,12 @@
 # Codi JSON
 
-Per inserir els analisis dels pacients ho farem amb arxius JSON, amb aquest podem inserir dades massives d'informació a les taules sense problema.
+Per inserir els anàlisis dels pacients ho farem amb arxius JSON, amb aquest podem inserir dades massives d'informació a les taules sense problema.
 
-## Tipus d'analisis
+## Tipus d'anàlisis
 
 Per començar, hem decidit afegir els 3 tipus d'anàlisis que es fan principalment en tot el món, sang, orina i esses.
 
-### Analisis de Sang
+### Anàlisis de Sang
 
 En aquests anàlisis es poden trobar molta informació que podem aprofitar per millorar la salut cardiovascular i tenir una millora significativa de com hem de treballar el nostre cos. En els nostres [anàlisis de sang](analisis_sang.json) informem:
 
@@ -22,7 +22,7 @@ En aquests anàlisis es poden trobar molta informació que podem aprofitar per m
 
 6. Hormones
 
-### Analisis d'Orina
+### Anàlisis d'Orina
 
 En el cas de [l'anàlisi d'orina](analisis_orina.json) podem veure si tenim problemes renals o d'altres malalties que podem afectar a la nostra vida, en aquests anàlisis podem trobar informació molt important com:
 
@@ -32,7 +32,7 @@ En el cas de [l'anàlisi d'orina](analisis_orina.json) podem veure si tenim prob
 
 3. Nitrits
 
-4. Proteines
+4. Proteïnes
 
 5. Glucosa
 
@@ -40,7 +40,7 @@ En el cas de [l'anàlisi d'orina](analisis_orina.json) podem veure si tenim prob
 
 I molta informació que pot ajudar-nos a mantenir una salut estable.
 
-### Analisis d'Esses
+### Anàlisis d'Esses
 
 Finalment, [l'anàlisi d'esses](analisis_eses.json) podem arribar a saber si tenim algun tipus de malaltia relacionada amb la salut intestinal, podem trobar informació com:
 
