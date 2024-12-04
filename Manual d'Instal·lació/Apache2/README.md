@@ -101,7 +101,7 @@ sudo a2nsite default-ssl.conf
 
 ## Activació del nostre Site
 
-Amb aixo fet finalment podem activar el nostre site:
+Amb això fet finalment podem activar el nostre site:
 
 ```:
 sudo a2ensite hospitalitoira.cat.conf
