@@ -1,4 +1,4 @@
-# Projecte Web: Analisis de Hospitalito IRA
+# Projecte Web: Anàlisis de Hospitalito IRA
 
 ## Resum del projecte
 
@@ -8,9 +8,9 @@ Finalment, després de molt pensar, hem volgut agarrar un apartat que cada vegad
 
 Actualment, hi ha moltes clíniques i hospitals que comencen a experimentar amb enviar aquestes dades mitjançant un "login" amb el DNI i l'identificador únic de l'anàlisi, on amb aquests podem veure des de les nostres còmodes cases sense l'esforç d'anar a l'hospital o a la clínica. Amb la idea ja al cap comencem amb aquest projecte.
 
-## Index
+## Índex
 
-Ara un index on es pot veure tot el nostre treball:
+Ara un índex on es pot veure tot el nostre treball:
 
 1. [Codi SQL (base de dades)](<Codi SQL>)
 2. [Codi PHP, JS i CSS (plana web)](<Codi PHP, JS i CSS>)
