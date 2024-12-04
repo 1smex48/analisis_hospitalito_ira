@@ -1,6 +1,6 @@
 # Codi SQL
 
-Per la creació de la nostra base de dades hem escollit utilitzar MYSQL, ja que es una base de dades relacional que ens permet accedir de manera rapida i sense complicacions a multiples dades de diferents taules gracies a que es relacional.
+Per la creació de la nostra base de dades hem escollit utilitzar MYSQL, ja que és una base de dades relacional que ens permet accedir de manera ràpida i sense complicacions a múltiples dades de diferents taules gràcies a què és relacional.
 
 ## Creació
 
