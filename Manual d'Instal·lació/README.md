@@ -4,7 +4,7 @@
 
 1. [Preparació del Servidor](#preparació-del-servidor)
 2. [Configuració del Servidor Apache2](<Apache2/README.md>)
-3. [Configuració del Servidor MySQL](<SQL/README.md>)
+3. [Configuració del Servidor MySQL](<MySQL/README.md>)
 4. [Creació del Codi PHP](<PHP/README.md>)
 
 ## Preparació del Servidor
