@@ -1,0 +1,5 @@
+CREATE USER 'adminmysql'@'%' IDENTIFIED BY 'P@ssw0rd';
+
+GRANT ALL PRIVILEGES ON *.* TO 'adminmysql'@'%' WITH GRANT OPTION;
+
+FLUSH PRIVILEGES;

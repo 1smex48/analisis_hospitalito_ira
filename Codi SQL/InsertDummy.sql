@@ -1,8 +1,3 @@
-CREATE USER 'adminmysql'@'%' IDENTIFIED BY 'P@ssw0rd';
-
-GRANT ALL PRIVILEGES ON *.* TO 'adminmysql'@'%' WITH GRANT OPTION;
-
-FLUSH PRIVILEGES;
 
 INSERT INTO analisis_hospitalito_ira.pacient(dni_pacient, nom, cognom1, cognom2, data_naix) 
 VALUES ('123456789', 'Juan', 'Pérez', 'García', '1990-01-01');
